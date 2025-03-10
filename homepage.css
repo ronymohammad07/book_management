@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: wheat;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* main section */
+.main_section {
+    width: 85%;
+    height: 100%;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    margin: 0 auto;
+    /* position: fixed */
+}
+
+/* navbar section */
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 86%;
+    background-color: #1F7D53;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    /* margin-top: 0.5rem; You can remove this if not needed */
+    z-index: 1000;
+    /* Ensures it stays on top of other elements */
+}
+
+
+
+
+/* navbar lodo */
+
+.logo {
+    font-size: 2rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/* navbar ul */
+.ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+
+
+/* Book information */
+.book_info {
+    background-color: #27391C;
+    color: white;
+    font-weight: bolder;
+    margin-top: 90px;
+    border-radius: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 1.1rem;
+
+}
+
+/* Main section */
+
+.main {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .card_one{
+    width: 20%;
+    height: 30%;
+    background-color: red;
+} */
+
+/* container */
+
+.card_section {
+    /* height: 100%; */
+    display: grid;
+    /* text-align: center; */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-rows: repeat( auto-fit, 200px); */
+    grid-auto-rows: repeat(auto-fit, 200px);
+    grid-gap: 10px;
+    margin-top: 2rem;
+    cursor: pointer;
+    /* grid-template-rows: 50px auto 50px; */
+}
+
+.card:nth-child(odd) {
+    background-color: #255F38;
+    /* grid-auto-rows: repeat(auto-fit, 220px); */
+    /* height: 220px; */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #27391C;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+
+    /* height: 200px; */
+}
+
+
+.card>.title {
+    /* background-color: #1F7D53; */
+    font-weight: bold;
+
+}
+
+.card>.author_name {
+    /* background-color: #1F7D53; */
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* card description */
+.description {
+    /* background-color: #1F7D53; */
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* publish year */
+
+.published_year,
+.year {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+
+/* footer section */
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    /* position: fixed; */
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-content {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+
+
+
+
+
+/* Responsive section */
+
+@media screen and (max-width: 768px) {
+
+    /* Main section */
+    .main_section {
+        width: 95%;
+        /* padding: 10px; */
+    }
+
+    /* navbar section */
+    .nav {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    /* navbar logo */
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    /* book information */
+    .book_info {
+        font-size: 1.5rem;
+        height: 50px;
+    }
+
+
+    /* card section */
+
+    .card_section {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 5px;
+    }
+}
